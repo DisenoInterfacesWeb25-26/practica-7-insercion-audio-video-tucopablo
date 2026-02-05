@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+        <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!-- Enlace al archivo CSS de Bootstrap 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="maqueta.css">
+</head>
+<body>
+
+<div class="container py-3">
+
+  <!-- HEADER -->
+  <div class="row mb-3 g-3">
+    <div class="col-12">
+      <div class="bg-primary-subtle border p-4">
+        Header
+      </div>
+    </div>
+  </div>
+
+  <!-- CENTRO -->
+  <div class="row mb-3 g-3">
+
+    <!-- MENU (caché mobile) -->
+    <div class="col-md-3 d-none d-md-block">
+      <div class="bg-success border p-4 h-100">
+        Menú
+      </div>
+    </div>
+
+    <!-- CONTENIDO -->
+    <div class="col-12 col-md-9">
+
+      <!-- AMARILLO -->
+      <div class="row mb-3 g-3">
+        <div class="col-12">
+          <div class="bg-warning-subtle border p-4">
+            Bloque amarillo
+          </div>
+        </div>
+      </div>
+
+      <!-- ROSAS -->
+      <div class="row mb-3 g-3 align-items-stretch" style="min-height: 200px;">
+  <div class="col-6 col-lg-3">
+    <div class="bg-danger-subtle border p-4 box-rosa h-100">Rosa</div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="bg-danger-subtle border p-4 box-rosa h-100">Rosa</div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="bg-danger-subtle border p-4 box-rosa h-100">Rosa</div>
+  </div>
+  <div class="col-6 col-lg-3">
+    <div class="bg-danger-subtle border p-4 box-rosa h-100">Rosa</div>
+  </div>
+</div>
+
+
+      <!-- VERDES -->
+      <div class="row mb-0 g-3 align-items-stretch" style="min-height: 300px;">
+        <div class="col-12 col-lg-6"><div class="bg-success-subtle border p-4 h-100">Verde</div></div>
+        <div class="col-12 col-lg-6"><div class="bg-success-subtle border p-4 h-100">Verde</div></div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="bg-info border p-4 text-white">
+    Footer
+  </footer>
+
+</div>
+
+
+
+<!-- Enlace a los archivos JavaScript de Bootstrap 5 por separado, popper debe ir primero (popper.js y bootstrap.min.js) -->
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
+
