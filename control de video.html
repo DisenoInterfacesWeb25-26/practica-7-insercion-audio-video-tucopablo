@@ -1,0 +1,254 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Control de video</title>
+
+  <!-- Bootstrap 5 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilo.css">
+</head>
+
+<body>
+
+<!--NAVBar-->
+<nav class="navbar navbar-expand-lg bg-info text-white navbar-light">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <img src="images/ENIUN@2x.png" alt="ENIUN" style="height:32px;">
+    </a>
+
+    <button class="navbar-toggler" type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#Navparaburger"
+            aria-controls="Navparaburger"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="Navparaburger">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Inicio</a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Servicios
+          </a>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="#">SEO</a></li>
+            <li><a class="dropdown-item" href="#">Marketing online</a></li>
+            <li><a class="dropdown-item" href="#">Diseño web</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link " aria-current="page" href="contacto.html">Contacto</a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link " href="tabla.html">Tabla</a><!--Parte 4 TABla-->
+            </li>
+              <li class="nav-item">
+          <a class="nav-link active" href="control de video.html">Control de vídeo</a>
+        </li>
+        
+      </ul>
+      
+       <form class="d-flex" role="search">
+        <input class="form-control form-control-sm me-2" type="search" placeholder="..." aria-label="Buscar">
+        <button class="btn btn-primary" type="submit">Buscar</button>
+      </form>
+    </div>
+  </div>
+  </nav>
+<!--MAin para poner el control-->
+<main class="container py-4">
+<nav aria-label="breadcrumb" class="mb-4">
+    <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Control de video</li>
+    </ol>
+  </nav>
+  <!--Atcividad 7- 5: Conttroles de video-->
+  <section id="controles" class="py-4">
+  <div class="container">
+    <h2 class="mb-3">Control de vídeo</h2>
+
+    <!--<video controls class="w-50 mt-4 rounded-3">
+                    <source src="video\video\videoC4Eebm.webm" type="video/webm">
+                    <source src="video\videoC4ogg.ogg" type="video/ogg">
+                    <source src="video\videoC4.mp4" type="video/mp4">
+                    tu navigator no soporta el video.
+                  </video>https://test-videos.co.uk/vids/bigbuckbunny/mp4/h264/1080/Big_Buck_Bunny_1080_10s_1MB.mp4-->
+                <video id="medio" class="rounded-3"width="720" height="400" >
+                    <source src="video\videoC4.mp4"><!--he puesto otra video que tenga sonido-->
+                </video>
+                <nav>
+                        <input type="button" id="reiniciar" value="reiniciar">
+                        <input type="button" id="retrasar" value="&laquo;">
+                        <input type="button" id="play" value="&#9658;">
+                        <input type="button" id="adelantar" value="&raquo;">
+                        <input type="button" id="silenciar" value="silenciar">
+                        <label>Volumen</label>
+                        <input type="button" id="menosVolumen" value="-">
+                        <input type="button" id="masVolumen" value="+">
+                </nav>
+  </div>
+</section>
+
+ 
+</main>
+<nav aria-label="Paginación" class="pb-4">
+  <ul class="pagination justify-content-center mb-0">
+
+    <li class="page-item">
+      <a class="page-link" href="contacto.html" aria-label="Anterior">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+
+    <li class="page-item">
+      <a class="page-link" href="index.html">1</a>git status
+      
+    </li>
+
+    <li class="page-item">
+      <a class="page-link" href="contacto.html">2</a>
+    </li>
+
+    <li class="page-item ">
+      <span class="page-link" aria-current="page">3</span>
+    </li>
+<!--Página 4-->
+    <li class="page-item active">
+      <a class="page-link" href="control de video.html">4</a>
+    </li>
+    
+    <li class="page-item disabled">
+      <span class="page-link" aria-hidden="true">&raquo;</span>
+    </li>
+
+  </ul>
+</nav>
+
+      <!--footer-->
+<footer class="bg-info text-white py-3">
+  <div class="container d-flex justify-content-between align-items-center">
+    <div>Eniun.com</div>
+    <small>Política de privacidad y cookies</small>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+function accionPlay()
+{
+	if(!medio.paused && !medio.ended) 
+	{
+		medio.pause();
+		play.value='\u25BA'; //\u25BA
+    document.body.style.backgroundColor = '#fff';
+	}
+	else
+	{
+		medio.play();
+		play.value='||';
+    document.body.style.backgroundColor = 'grey';
+	}
+}
+function accionReiniciar()
+{
+    medio.currentTime=0; //Usar propiedad .currentTime
+    medio.play();//Reproducir el vídeo
+    play.value='||'//Cambiar el valor del botón a ||
+ 
+  
+  
+}
+function accionRetrasar()
+{
+	//Usar propiedad .curentTime
+  //Contemplar que no existen valores negativos
+  if(medio.currentTime -5<0)
+    {
+        medio.currentTime=0
+    }
+    else{
+        medio.cuurentTime=medio.currentTime -5;
+    }
+  
+}
+function accionAdelantar()
+{
+  //Contemplar que no existen valores mayores a medio.duration	
+  if(medio.currentTime +5>medio.duration)
+    {
+        medio.currentTime=medio.duration;
+    }
+    else{
+        medio.currentTime=medio.currentTime +5;
+    }
+}
+function accionSilenciar()
+{
+	//Utilizar medio.muted = true; o medio.muted = false;
+    if(medio.muted===true)
+    {
+        medio.muted=false;
+    }
+    else
+    {
+        medio.muted=true;
+    }
+
+    if (medio.muted===true) {
+    silenciar.value = " Escuchar ";
+  } else {
+    silenciar.value = " Silenciar ";
+  }
+}
+function accionMasVolumen()
+{
+    
+    if(medio.volume<1)
+{
+     medio.volume =medio.volume+0.1;
+}
+	//Contemplar que el valor máximo de volumen es 1
+}
+function accionMenosVolumen()
+{
+    if(medio.volume>0)
+{
+     medio.volume =medio.volume-0.1;
+}
+	//Contemplar que el valor mínimo de volumen es 0
+}
+
+function iniciar() 
+{
+	
+	medio=document.getElementById('medio');
+	play=document.getElementById('play');
+	reiniciar=document.getElementById('reiniciar');
+	retrasar=document.getElementById('retrasar');
+	adelantar=document.getElementById('adelantar');
+	silenciar=document.getElementById('silenciar');
+
+	play.addEventListener('click', accionPlay);
+	reiniciar.addEventListener('click', accionReiniciar);
+	retrasar.addEventListener('click', accionRetrasar);
+	adelantar.addEventListener('click', accionAdelantar);
+	silenciar.addEventListener('click', accionSilenciar);
+	menosVolumen.addEventListener('click', accionMenosVolumen);
+	masVolumen.addEventListener('click', accionMasVolumen);
+}
+
+window.addEventListener('load', iniciar, false);
+
+</script>
+</body>
+</html>
